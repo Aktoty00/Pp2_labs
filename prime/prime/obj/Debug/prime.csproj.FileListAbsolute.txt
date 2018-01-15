@@ -1,6 +1,0 @@
-c:\users\рысдаулет актоты\documents\visual studio 2015\Projects\prime\prime\bin\Debug\prime.exe.config
-c:\users\рысдаулет актоты\documents\visual studio 2015\Projects\prime\prime\bin\Debug\prime.exe
-c:\users\рысдаулет актоты\documents\visual studio 2015\Projects\prime\prime\bin\Debug\prime.pdb
-c:\users\рысдаулет актоты\documents\visual studio 2015\Projects\prime\prime\obj\Debug\prime.csprojResolveAssemblyReference.cache
-c:\users\рысдаулет актоты\documents\visual studio 2015\Projects\prime\prime\obj\Debug\prime.exe
-c:\users\рысдаулет актоты\documents\visual studio 2015\Projects\prime\prime\obj\Debug\prime.pdb

@@ -1,9 +1,0 @@
-c:\users\рысдаулет актоты\documents\visual studio 2015\Projects\Program1.cs\Program1.cs\bin\Debug\Program1.cs.exe.config
-c:\users\рысдаулет актоты\documents\visual studio 2015\Projects\Program1.cs\Program1.cs\bin\Debug\Program1.cs.exe
-c:\users\рысдаулет актоты\documents\visual studio 2015\Projects\Program1.cs\Program1.cs\bin\Debug\Program1.cs.pdb
-c:\users\рысдаулет актоты\documents\visual studio 2015\Projects\Program1.cs\Program1.cs\obj\Debug\Program1.cs.csprojResolveAssemblyReference.cache
-c:\users\рысдаулет актоты\documents\visual studio 2015\Projects\Program1.cs\Program1.cs\obj\Debug\Program1.cs.exe
-c:\users\рысдаулет актоты\documents\visual studio 2015\Projects\Program1.cs\Program1.cs\obj\Debug\Program1.cs.pdb
-C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\Program1.cs\Program1.cs\bin\Debug\Program1.cs.exe.config
-C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\Program1.cs\Program1.cs\obj\Debug\Program1.cs.exe
-C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\Program1.cs\Program1.cs\obj\Debug\Program1.cs.pdb
