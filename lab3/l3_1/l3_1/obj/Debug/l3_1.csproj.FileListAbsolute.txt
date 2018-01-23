@@ -1,0 +1,6 @@
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\l3_1\l3_1\bin\Debug\l3_1.exe.config
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\l3_1\l3_1\bin\Debug\l3_1.exe
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\l3_1\l3_1\bin\Debug\l3_1.pdb
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\l3_1\l3_1\obj\Debug\l3_1.csprojResolveAssemblyReference.cache
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\l3_1\l3_1\obj\Debug\l3_1.exe
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\l3_1\l3_1\obj\Debug\l3_1.pdb
