@@ -1,0 +1,6 @@
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab2_2\lab2_2\bin\Debug\lab2_2.exe.config
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab2_2\lab2_2\bin\Debug\lab2_2.exe
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab2_2\lab2_2\bin\Debug\lab2_2.pdb
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab2_2\lab2_2\obj\Debug\lab2_2.csprojResolveAssemblyReference.cache
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab2_2\lab2_2\obj\Debug\lab2_2.exe
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab2_2\lab2_2\obj\Debug\lab2_2.pdb
