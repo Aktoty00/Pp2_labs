@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
-namespace W3G1_Example3
+namespace l3_4s
 {
     class Program
     {
@@ -29,7 +29,7 @@ namespace W3G1_Example3
                 }
                 else
                 {
-                    Console.ForegroundColor = ConsoleColor.DarkCyan;
+                    Console.ForegroundColor = ConsoleColor.DarkMagenta;
                 }
                 Console.WriteLine(fileSystemInfo.Name);
             }

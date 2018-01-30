@@ -1,6 +1,0 @@
-C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\L3.1\L3.1\bin\Debug\L3.1.exe.config
-C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\L3.1\L3.1\obj\Debug\L3.1.csprojResolveAssemblyReference.cache
-C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\L3.1\L3.1\bin\Debug\L3.1.exe
-C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\L3.1\L3.1\bin\Debug\L3.1.pdb
-C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\L3.1\L3.1\obj\Debug\L3.1.exe
-C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\L3.1\L3.1\obj\Debug\L3.1.pdb
