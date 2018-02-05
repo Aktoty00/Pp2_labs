@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "primenumbers", "primenumbers\primenumbers.csproj", "{3190CECE-9033-4984-91DE-CF1FFEDE7689}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prime", "prime\prime.csproj", "{9B8AD9AD-1D62-43B8-9833-36E3BDFC0E65}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3190CECE-9033-4984-91DE-CF1FFEDE7689}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3190CECE-9033-4984-91DE-CF1FFEDE7689}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3190CECE-9033-4984-91DE-CF1FFEDE7689}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3190CECE-9033-4984-91DE-CF1FFEDE7689}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B8AD9AD-1D62-43B8-9833-36E3BDFC0E65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B8AD9AD-1D62-43B8-9833-36E3BDFC0E65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B8AD9AD-1D62-43B8-9833-36E3BDFC0E65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B8AD9AD-1D62-43B8-9833-36E3BDFC0E65}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -10,14 +10,18 @@ namespace prime
     {
         static void Main(string[] args)
         {
-            string line = Console.ReadLine(); // we read numbers
-            int n = 0;//counter of deviders
+            string line;
+            line = Console.ReadLine(); // we read numbers
+            
             args = line.Split(' ');
-            foreach(string s in args)
+            foreach (string s in args)
             {
-                for (int i = 1; i <= int.Parse(s); ++i)//int.Parse-> converting from string to int
+                int a = int.Parse(s);
+                int n = 0;//counter of deviders
+                for (int i = 1; i <= a; ++i)//int.Parse-> converting from string to int
                 {
-                    if (int.Parse(s) % i == 0)
+                    
+                    if (a % i == 0)
                     {
                         n++; //a number of deviders
                     }

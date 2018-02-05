@@ -23,7 +23,7 @@ namespace lab2_2
     }
         static void Main(string[] args)
         {
-            string line = File.ReadAllText(@"C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\minmax.txt");
+            string line = File.ReadAllText(@"C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab2\minmax.txt");
             string[] line2 = line.Split(' ');
             int minprime =1287112322;
             foreach(string s in line2)
