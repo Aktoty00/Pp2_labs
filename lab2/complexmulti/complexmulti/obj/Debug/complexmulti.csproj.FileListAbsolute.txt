@@ -1,0 +1,6 @@
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\prac\complexmulti\complexmulti\bin\Debug\complexmulti.exe.config
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\prac\complexmulti\complexmulti\bin\Debug\complexmulti.exe
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\prac\complexmulti\complexmulti\bin\Debug\complexmulti.pdb
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\prac\complexmulti\complexmulti\obj\Debug\complexmulti.csprojResolveAssemblyReference.cache
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\prac\complexmulti\complexmulti\obj\Debug\complexmulti.exe
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\prac\complexmulti\complexmulti\obj\Debug\complexmulti.pdb

@@ -15,11 +15,11 @@ namespace l3_4s
             Console.Clear();
             FileSystemInfo[] fileSystemInfos = directory.GetFileSystemInfos();
 
-            for (int index = 0; index < fileSystemInfos.Length; index++)
+            for (int i = 0; i < fileSystemInfos.Length; i++)
             {
-                FileSystemInfo fileSystemInfo = fileSystemInfos[index];
-                if (index == cursor)
-                    Console.BackgroundColor = ConsoleColor.Gray;
+                FileSystemInfo fileSystemInfo = fileSystemInfos[i];
+                if (i == cursor)
+                 Console.BackgroundColor = ConsoleColor.Gray;
                 else
                     Console.BackgroundColor = ConsoleColor.Black;
 
