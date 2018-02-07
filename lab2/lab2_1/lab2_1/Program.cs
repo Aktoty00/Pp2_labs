@@ -21,10 +21,12 @@ namespace lab2_1
                 maxx = Math.Max(maxx, int.Parse(s));
                 minn = Math.Min(minn, int.Parse(s));
             }
-            Console.WriteLine("max is : ");
-            Console.WriteLine(maxx);
-            Console.WriteLine("minn is : ");
-            Console.WriteLine(minn);
+
+            StreamWriter sw = new StreamWriter(@"C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab2\result");
+            sw.WriteLine("max is " + maxx);
+            sw.WriteLine("min is " + minn);
+            sw.Close();
+
             Console.ReadKey();
 
 

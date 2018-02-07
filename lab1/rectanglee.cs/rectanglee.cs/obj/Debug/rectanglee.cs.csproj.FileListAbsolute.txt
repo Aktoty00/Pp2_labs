@@ -1,9 +1,0 @@
-c:\users\рысдаулет актоты\documents\visual studio 2015\Projects\rectanglee.cs\rectanglee.cs\bin\Debug\rectanglee.cs.exe.config
-c:\users\рысдаулет актоты\documents\visual studio 2015\Projects\rectanglee.cs\rectanglee.cs\bin\Debug\rectanglee.cs.exe
-c:\users\рысдаулет актоты\documents\visual studio 2015\Projects\rectanglee.cs\rectanglee.cs\bin\Debug\rectanglee.cs.pdb
-c:\users\рысдаулет актоты\documents\visual studio 2015\Projects\rectanglee.cs\rectanglee.cs\obj\Debug\rectanglee.cs.csprojResolveAssemblyReference.cache
-c:\users\рысдаулет актоты\documents\visual studio 2015\Projects\rectanglee.cs\rectanglee.cs\obj\Debug\rectanglee.cs.exe
-c:\users\рысдаулет актоты\documents\visual studio 2015\Projects\rectanglee.cs\rectanglee.cs\obj\Debug\rectanglee.cs.pdb
-C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\rectanglee.cs\rectanglee.cs\bin\Debug\rectanglee.cs.exe.config
-C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\rectanglee.cs\rectanglee.cs\obj\Debug\rectanglee.cs.exe
-C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\rectanglee.cs\rectanglee.cs\obj\Debug\rectanglee.cs.pdb

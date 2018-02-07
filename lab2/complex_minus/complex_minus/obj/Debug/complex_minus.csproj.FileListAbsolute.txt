@@ -4,3 +4,6 @@ C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\prac\complex_minus\com
 C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\prac\complex_minus\complex_minus\obj\Debug\complex_minus.csprojResolveAssemblyReference.cache
 C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\prac\complex_minus\complex_minus\obj\Debug\complex_minus.exe
 C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\prac\complex_minus\complex_minus\obj\Debug\complex_minus.pdb
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab2\complex_minus\complex_minus\bin\Debug\complex_minus.exe.config
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab2\complex_minus\complex_minus\obj\Debug\complex_minus.exe
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab2\complex_minus\complex_minus\obj\Debug\complex_minus.pdb

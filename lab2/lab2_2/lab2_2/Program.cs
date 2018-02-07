@@ -34,7 +34,10 @@ namespace lab2_2
                     minprime = k;
                 }
             }
-            Console.WriteLine(minprime);
+
+            StreamWriter sw = new StreamWriter(@"C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab2\res_for_prime");
+            sw.WriteLine("min prime number is " + minprime);
+            sw.Close();
             Console.ReadKey();
         }
     }
