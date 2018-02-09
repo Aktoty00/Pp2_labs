@@ -4,80 +4,76 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace snake
+namespace snake1step
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.SetWindowSize(80, 30);
-            Random rnd = new Random();
-            int n = rnd.Next(2, 75);
-            int m = rnd.Next(2, 28);
-            int level = 1;
-            wall wall = new wall(level);
-            snake snake = new snake();
+            Console.CursorVisible = false;
+            Console.SetWindowSize(85, 35);
+            Snake snake = new Snake();
+            Food food = new Food();
+            Wall wall = new Wall();
 
-            fruit eat = new fruit(n, m);
 
             while (true)
             {
+                Console.Clear();
+                snake.Draw();
+                food.Draw();
+                wall.Draw();
 
-                ConsoleKeyInfo keyinfo = Console.ReadKey();
 
-                if (keyinfo.Key == ConsoleKey.DownArrow)
-                    snake.Move(0, 1);
-                if (keyinfo.Key == ConsoleKey.UpArrow)
-                    snake.Move(0, -1);
-                if (keyinfo.Key == ConsoleKey.LeftArrow)
-                    snake.Move(-1, 0);
-                if (keyinfo.Key == ConsoleKey.RightArrow)
-                    snake.Move(1, 0);
-                if (keyinfo.Key == ConsoleKey.R)
+                ConsoleKeyInfo button = Console.ReadKey();
+                switch (button.Key)
                 {
-                    level = 1;
-                    snake = new snake();
-                    wall = new wall(level);
-                    n = rnd.Next(2, 78);
-                    m = rnd.Next(2, 28);
-                    eat = new fruit(n, m);
-                    if (snake.CollisionWithFruit(eat))
-                    {
-                        snake.Adding();
-                        n = rnd.Next(2, 78);
-                        m = rnd.Next(2, 28);
-                        eat = new fruit(n, m);
-                    }
-                    if (snake.CollisionWithWall(wall) || snake.Collision())
-                    {
-                        Console.Clear();
-                        Console.SetCursorPosition(5, 5);
-                        Console.WriteLine("GAME OVER!!!!");
-                        Console.ReadKey();
-                        snake = new snake();
-                        level = 1;
-                        n = rnd.Next(2, 78);
-                        m = rnd.Next(2, 28);
-                        wall = new wall(level);
-                        eat = new fruit(n, m);
-                    }
-                    if (snake.UpLevel(level))
-                    {
-                        level++;
-                        snake = new snake();
-                        wall = new wall(level);
-                        n = rnd.Next(2, 78);
-                        m = rnd.Next(2, 18);
-                        eat = new fruit(n, m);
-                    }
+                    case ConsoleKey.UpArrow:
+                        snake.Move(0, -1);
+                        break;
+                    case ConsoleKey.DownArrow:
+                        snake.Move(0, 1);
+                        break;
+                    case ConsoleKey.LeftArrow:
+                        snake.Move(-1, 0);
+                        break;
+                    case ConsoleKey.RightArrow:
+                        snake.Move(1, 0);
+                        break;
+                }
 
-                    Console.Clear();
-                    fruit.Showfood(n, m);
-                    snake.Draw();
-                    wall.Draw();
+                if (snake.body[0].x < 0)
+                    snake.body[0].x = 69;
+                if (snake.body[0].x > 69)
+                    snake.body[0].x = 0;
+                if (snake.body[0].y < 0)
+                    snake.body[0].y = 19;
+                if (snake.body[0].y > 19)
+                    snake.body[0].y = 0;
+
+                if (snake.Eat(food))
+                {
+                    food.SetRandomPos();
+                }
+
+                if (snake.Die1(wall) == false)
+                {
+                    Console.SetCursorPosition(70, 33);
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                    Console.WriteLine("Game Over!!!");
+                    Console.ReadKey();
+                    return;
+                }
+                if (snake.Die2() == false)
+                {
+                    Console.SetCursorPosition(70, 35);
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                    Console.WriteLine("Game Over!!!");
+                    Console.ReadKey();
+                    return;
                 }
             }
 
-            }
         }
+    }
 }

@@ -4,18 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace snake
+namespace snake1step
 {
-    class point
+    class Point
     {
         public int x, y;
-        public point()
+
+
+        public Point(int _x, int _y)
         {
+            x = _x;
+            y = _y;
         }
-        public point(int x_, int y_)
-        {
-            this.x = x_;
-            this.y = y_;
-        }
+
     }
 }

@@ -4,51 +4,37 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace snake
+namespace snake1step
 {
-    [Serializable]
-    class fruit
+    class Food
     {
-        Random rnd = new Random();
+        public char sign;
+        public Point loc;
+        public ConsoleColor color;
 
-        public int x, y;
-        public fruit() { }
-        public bool b = false;
-        public fruit(int x, int y)
+        public Food()
         {
-            this.x = x;
-            this.y = y;
+            sign = '@';
+            color = ConsoleColor.Red;
+            SetRandomPos();
         }
 
-        public bool testwall(wall w)
+        public void SetRandomPos()
         {
-            foreach (point p in w.body)
-            {
-                if (p.x == x && p.y == y)
-                {
-                    return false;
-                }
+            int x = new Random().Next(0, 70);
+            int y = new Random().Next(0, 20);
 
-            }
-            return true;
+            loc = new Point(x, y);
         }
-       /* public bool testsnake(snake s)
-        {
-            foreach (point p in s.)
-            {
-                if (p.x == x && p.y == y)
-                {
-                    return false;
-                }
-            }
-            return true;
-        }*/
 
-        public static void Showfood(int x, int y)
+        public void Draw()
         {
-            Console.ForegroundColor = ConsoleColor.Black;
-            Console.SetCursorPosition(x, y);
-            Console.WriteLine("Q");
+            Console.ForegroundColor = color;
+
+            Console.SetCursorPosition(loc.x, loc.y);
+            Console.Write(sign);
         }
+
+
     }
 }

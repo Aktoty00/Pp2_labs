@@ -1,53 +1,63 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.IO;
 
-namespace snake
+namespace snake1step
 {
-    [Serializable]
-    class wall
+    class Wall
     {
-        public List<point> body;
-        public string sign;
+        public List<Point> body;
+        public char sign;
         public ConsoleColor color;
 
-        public void Readlevel(int level)
+        public Wall()
         {
-            StreamReader sr = new StreamReader(@"C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab4\snake\snake\level" + level + ".txt");
-            int n = int.Parse(sr.ReadLine());
-            for (int i=0; i<n; ++i)
+            sign = '#';
+            color = ConsoleColor.DarkYellow;
+
+            body = new List<Point>();
+            Level(2);
+        }
+
+
+        public void Level(int a)
+        {
+            string path = string.Format(@"C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab4\snake\snake\level"+a+".txt");
+            FileStream fs = new FileStream(path, FileMode.Open, FileAccess.Read);
+            StreamReader sr = new StreamReader(fs);
+
+            string line = "";
+            int i = 0;
+            int row = 0;
+            while (i < 20)
             {
-                string a = sr.ReadLine();
-                for (int j = 0; j < a.Length; ++j)
+                line = sr.ReadLine();
+                for (int col = 0; col < line.Length; col++)
                 {
-                    if (a[j] == '*')
+                    if (line[col] == '#')
                     {
-                        body.Add(new point(j, i));
+                        body.Add(new Point(col, row));
                     }
                 }
+                i++;
+                row++;
             }
-            sr.Close();
-        }
-         public wall (int level)
-        {
-            body = new List<point>();
-            sign = "o";
-            color = ConsoleColor.DarkRed;
-            Readlevel(level);
         }
 
         public void Draw()
         {
             Console.ForegroundColor = color;
-            foreach(point p in body)
+
+            foreach (Point p in body)
             {
                 Console.SetCursorPosition(p.x, p.y);
                 Console.Write(sign);
             }
+
         }
+
     }
 }
