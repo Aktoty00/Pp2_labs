@@ -34,7 +34,7 @@ namespace complexser
             bf = new BinaryFormatter();
             FileStream fss = new FileStream("data.txt", FileMode.OpenOrCreate, FileAccess.ReadWrite);
             complex_number t = bf.Deserialize(fss) as complex_number;
-            Console.WriteLine(t);
+            Console.WriteLine(t + "output"); 
             Console.ReadKey();
         }
     }
