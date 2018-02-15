@@ -3,26 +3,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace SnakeGame
 {
+    [Serializable]
     class Snake
     {
         public List<Point> body;
         public char sign;
         public ConsoleColor color;
+        public int record,score ;
         public Snake()
         {
+            record = 0;
             sign = '*';
             body = new List<Point>();
             body.Add(new Point(10,10));
             color = ConsoleColor.Yellow;
-         
         }
 
         public void Move(int dx, int dy)
         {
-            for(int i=body.Count -1; i>0; --i)
+            int xxx = body[body.Count - 1].x;
+            int yyy = body[body.Count - 1].y;
+
+            for (int i=body.Count -1; i>0; --i)
             {
                 body[i].x = body[i - 1].x;
                 body[i].y = body[i - 1].y;
@@ -39,6 +45,8 @@ namespace SnakeGame
                 body[0].y = Console.WindowHeight - 1;
             if (body[0].y > Console.WindowHeight - 1)
                 body[0].y = 1;
+            Console.SetCursorPosition(xxx, yyy);
+            Console.Write(' ');
         }
 
         public void Draw()
@@ -55,13 +63,16 @@ namespace SnakeGame
                 Console.SetCursorPosition(p.x, p.y);
                 Console.WriteLine(sign);
                 index++;
+                
             }
         }
 
         public bool Eaten(Food f)
         {
             if (body[0].x == f.loc.x && body[0].y == f.loc.y)
+            {
                 return true;
+            }
             else
                 return false;
         }

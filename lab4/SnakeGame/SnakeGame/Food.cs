@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization.Formatters.Binary;
+
 
 namespace SnakeGame
 {
+    [Serializable]
     class Food
     {
        
@@ -16,14 +19,14 @@ namespace SnakeGame
         public Food()
         {
             foodcolor = ConsoleColor.Red;
-            foodsign = '@';
+            foodsign = '$';
             SetRandomPos();
         }
 
         public void SetRandomPos()
         {
-            int x = new Random().Next(1, 30);
-            int y = new Random().Next(1, 15);
+            int x = new Random().Next(2, 30);
+            int y = new Random().Next(2, 15);
 
             loc = new Point(x, y);  
         }

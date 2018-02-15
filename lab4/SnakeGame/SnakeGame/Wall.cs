@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
+
 
 namespace SnakeGame
 {
+    [Serializable]
     class Wall
     {
         public List<Point> wallbody;
@@ -26,7 +29,7 @@ namespace SnakeGame
             }
             sr.Close();
         }
-
+        
         public Wall(int level)
         {
             wallbody = new List<Point>();
@@ -43,6 +46,7 @@ namespace SnakeGame
                 Console.SetCursorPosition(p.x, p.y);
                 Console.Write(wallsign);
             }
+        
         }
     }
 }
