@@ -8,7 +8,7 @@ namespace SnakeGame
 { [Serializable]
     class Point
     {
-        public int x, y;
+        public int x, y; //coordinates
 
         public Point(int x_, int y_)
             {

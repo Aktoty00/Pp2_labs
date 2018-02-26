@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Threading;
 
 namespace SnakeGame
 {
@@ -12,6 +13,7 @@ namespace SnakeGame
     {
         static void F1(Snake snake)
         {
+            //Serialization of the snake
             FileStream v = new FileStream("data1.txt", FileMode.OpenOrCreate, FileAccess.ReadWrite);
             BinaryFormatter bf = new BinaryFormatter();
             bf.Serialize(v, snake);
@@ -19,7 +21,7 @@ namespace SnakeGame
         }
         static Snake F2()
         {
-
+            //Deserialization of the snake
             FileStream v = new FileStream("data1.txt", FileMode.OpenOrCreate, FileAccess.ReadWrite);
             BinaryFormatter bf = new BinaryFormatter();
             Snake snake2 = bf.Deserialize(v) as Snake;
@@ -28,6 +30,7 @@ namespace SnakeGame
         }
         static void F3(Wall wall)
         {
+            //Serialization of the wall
             FileStream v = new FileStream("data2.txt", FileMode.OpenOrCreate, FileAccess.ReadWrite);
             BinaryFormatter bf = new BinaryFormatter();
             bf.Serialize(v, wall);
@@ -36,7 +39,7 @@ namespace SnakeGame
         }
         static Wall F4()
         {
-
+            //Deserialization of the wall
             FileStream v = new FileStream("data2.txt", FileMode.OpenOrCreate, FileAccess.ReadWrite);
             BinaryFormatter bf = new BinaryFormatter();
             Wall wall = bf.Deserialize(v) as Wall;
@@ -45,12 +48,14 @@ namespace SnakeGame
         }
         static void F5(int b)
         {
+            // writing the record to record.txt
             StreamWriter a = new StreamWriter(@"C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab4\SnakeGame\SnakeGame\record.txt");
             a.WriteLine(b);
             a.Close();
         }
         static int F6()
         {
+            // reading the record from record.txt
             StreamReader a = new StreamReader(@"C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab4\SnakeGame\SnakeGame\record.txt");
             string s = a.ReadLine();
             a.Close();
@@ -58,6 +63,7 @@ namespace SnakeGame
         }
         static void F7(Food food)
         {
+            //Serialization of the food
             FileStream v = new FileStream("date3.txt", FileMode.OpenOrCreate, FileAccess.ReadWrite);
             BinaryFormatter bf = new BinaryFormatter();
             bf.Serialize(v, food);
@@ -66,43 +72,124 @@ namespace SnakeGame
         }
         static Food F8()
         {
-
+            //Deserialization of the food
             FileStream v = new FileStream("date3.txt", FileMode.OpenOrCreate, FileAccess.ReadWrite);
             BinaryFormatter bf = new BinaryFormatter();
             Food food = bf.Deserialize(v) as Food;
             v.Close();
             return food;
-
         }
+
+        static Snake snake = new Snake();
+        static Food food = new Food();
+        static int level = 1;
+        static Wall wall = new Wall(level);
+        static int score = 0;
+        static int direction = 1; //right is 1, left is 2, down is 3, up is 4
+        static bool gameover = false;
+        static int speed = 200;
+        static int record1 = F6();
+
+
+        static void SnakeIsMoving()
+        {
+            while (!gameover)
+            {
+                /*if(score == level * 5)
+                {
+                    level++;
+                }*/
+                if( direction == 1)
+                {
+                    snake.Move(1, 0);
+                }
+                if (direction == 2)
+                {
+                    snake.Move(-1, 0);
+                }
+                if (direction == 3)
+                {
+                    snake.Move(0, 1);
+                }
+                if (direction == 4)
+                {
+                    snake.Move(0, -1);
+                }
+                Console.SetCursorPosition(1, 28);
+                Console.WriteLine("High score : " + record1 + "          Score: " + score + "          Level:  " + level);
+                Console.SetCursorPosition(1, 27);
+                Console.WriteLine("If you want to safe,please type SpaceBar    " + "        If you want to exit,please type Esc ");
+                while (!food.OnTheWall(wall) || !food.OnTheSnake(snake))
+                {
+                    //if food appears on the wall or snake, we call the SetRandomPos function again to create new food
+                    food.SetRandomPos();
+                    Console.SetCursorPosition(food.loc.x, food.loc.y);
+                    Console.Write(food.foodsign);
+
+                }
+                if (snake.CollisionWithWall(wall) || snake.CollisionSnake())
+                {
+                    //if snake collides to the wall or himself, we do write "Game Over" and score, high score
+                    Console.Clear();
+                    Console.SetCursorPosition(24, 14);
+                    Console.WriteLine(" GAME OVER ! ! ! ");
+                    Console.SetCursorPosition(15, 15);
+                    Console.WriteLine("High score : " + record1 + " Your score is  " + score);
+
+                    Console.ReadKey();
+                    //after pressing some key, we start the game from the beginning
+                    Console.Clear();
+                    snake = new Snake();
+                    level = 1;
+                    score = 0;
+                    wall = new Wall(level);
+
+                }
+
+                if (snake.Eaten(food))
+                {
+                    //if snake eats food, the score will be increased
+                    score += 1;
+                    //record is the max value of the score and saved record
+                    record1 = Math.Max(record1, score);
+                    //if snake eats food, we add one additional point to the of the snake
+                    snake.body.Add(new Point(snake.body[snake.body.Count - 1].x, snake.body[snake.body.Count - 1].y));
+                    //we call SetRandomPos to create new food after eatting the previous
+                    food.SetRandomPos();
+                    Console.SetCursorPosition(food.loc.x, food.loc.y);
+                    Console.Write(food.foodsign);
+
+                }
+                
+                snake.Draw();
+                food.FoodDraw();
+                wall.WallDraw();
+                
+                if(snake.score == level *5 )
+                    speed = Math.Max(1, speed - 50);
+                
+                Thread.Sleep(speed);
+            }
+        }
+        
 
         static void Main(string[] args)
         {
-            Console.CursorVisible = false;
-            Console.SetWindowSize(35, 35);
-            
 
-            int level = 1;
-            int score = 1;
-            int record1 = F6();
-            Snake snake = new Snake();
+            Thread thread = new Thread(SnakeIsMoving);
+            Console.CursorVisible = false; //to hide the cursor
+            Console.SetWindowSize(44, 44);
             
-           
-            Console.Clear();
-            Wall wall = new Wall(level);
-            
-           
-            Food food = new Food();
-            
-         
             Console.WriteLine("If you want to start again press R");
-            Console.WriteLine("If you want to continue press 2");
+            Console.WriteLine("If you want to continue press C");
+
             ConsoleKeyInfo keyinfo1 = Console.ReadKey();
             ConsoleKeyInfo keyinfo2;
 
 
-            if (keyinfo1.Key == ConsoleKey.NumPad2)
+            if (keyinfo1.Key == ConsoleKey.C)
             {
-                
+                //to continue the game , we call the Deserialized sanke, wall, food, and record
                 snake =  F2();
                 wall =  F4();
                 record1 =  F6();
@@ -110,37 +197,38 @@ namespace SnakeGame
                 score = snake.score;
             }
             Console.Clear();
-            wall.WallDraw();
-            snake.Draw();
-            food.FoodDraw();
-            while (true)
+          
+            thread.Start();
+            
+            while (!gameover) 
             {
-
-                Console.SetCursorPosition(0, 0);
-                Console.WriteLine("High score : " + record1 + " Score: " + score + " Level:  " + level + " food is here: " + food.loc.x + " " + food.loc.y);
-                Console.SetCursorPosition(0, 1);
-                Console.WriteLine("If you want to safe,please type SpaceBar " + "      If you want to exit,please type Esc ");
                
-                 keyinfo2= Console.ReadKey();
-                if (keyinfo2.Key == ConsoleKey.DownArrow)
-                    snake.Move(0, 1);
+               
+                keyinfo2= Console.ReadKey();
+                if (keyinfo2.Key == ConsoleKey.DownArrow && direction != 4)
+                    direction = 3;
                 if (keyinfo2.Key == ConsoleKey.UpArrow)
-                    snake.Move(0, -1);
+                    direction = 4;
                 if (keyinfo2.Key == ConsoleKey.LeftArrow)
-                    snake.Move(-1, 0);
+                    direction = 2;
                 if (keyinfo2.Key == ConsoleKey.RightArrow)
-                    snake.Move(1, 0);
+                    direction = 1;
                 if (keyinfo2.Key == ConsoleKey.R)
                 {
+                    //we use 'R' to restart the game
                     Console.Clear();
+                    //we return the initial values of the level, score. 
                     level = 1;
                     score = 0;
+                    //then we create a new snake and wall depending on the level
                     snake = new Snake();
                     wall = new Wall(level);
                 }
                 if (keyinfo2.Key == ConsoleKey.Spacebar)
                 {
-                    snake.score = score;
+                    //we use 'R' to save the game
+                    snake.score = score; // saving the score
+                    //serialize the snake, food, wall and record to keep information of the saved game
                     F1(snake);
                     F3(wall);
                     F5(record1);
@@ -149,69 +237,27 @@ namespace SnakeGame
                 }
                 if (keyinfo2.Key == ConsoleKey.Escape)
                 {
-                    return;
-                }
-                int k = 0;
-                while (!food.OnTheWall(wall) || !food.OnTheSnake(snake))
-                {  
-                    food.SetRandomPos();
-                    Console.SetCursorPosition(food.loc.x, food.loc.y);
-                    Console.Write(food.foodsign);
+                    //leaving the game
+                    //returns nothing
 
+                    gameover = true;
                 }
                
-                if (snake.CollisionWithWall(wall) || snake.CollisionSnake())
-                {
-                    Console.Clear();
-                    Console.SetCursorPosition(10, 10);
-                    Console.WriteLine(" GAME OVER ! ! ! ");
-                    Console.SetCursorPosition(10, 11);
-                    Console.WriteLine("High score : " + record1 + " Your score is  " + score);
-
-                    Console.ReadKey();
-                    snake = new Snake();
-                    level = 1;
-                    score = 0;
-                    wall = new Wall(level);
-                    
-                }
-
-                if (snake.Eaten(food))
-                {
-                    score +=1;
-                    record1 = Math.Max(record1, score); 
-
-                    snake.body.Add(new Point(snake.body[snake.body.Count - 1].x, snake.body[snake.body.Count - 1].y));
-                    food.SetRandomPos();
-                   
-                                    
-                    Console.SetCursorPosition(food.loc.x, food.loc.y);
-                    Console.Write(food.foodsign);
-                  
-                }
-                
                 if (score == level*5)
                 {
+                    //to go to the next level, the score must be equal to the 5*level
                     Console.Clear();
-                    level++;
-                    int xx = 7;
+                    level++; // next level
+                    int xx = 7; // we use it to move snake to safe place when it changes levels
                     wall = new Wall(level);
                     for (int i = 0; i < snake.body.Count; ++i)
                     {
-                        snake.body[i].y = 18;
-                        snake.body[i].x = xx;
+                        snake.body[i].y = 22; // y of safe place
+                        snake.body[i].x = xx; // x of safe place
                         xx++;
-                            }
-
+                    }
                 }
-                
-                
-                
-                food.FoodDraw();
-                wall.WallDraw();
-                snake.Draw();
-
-
+              
             }
         }
     }
