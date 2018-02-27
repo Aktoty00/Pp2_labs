@@ -12,7 +12,7 @@ namespace lab2_1
         static void Main(string[] args)
         {
             string line = File.ReadAllText(@"C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab2\minmax.txt");
-            string[] line1 = line.Split(' ') ;
+            string[] line1 = line.Split(' ');
             int maxx = -123123132;
             int minn = 123123123;
 
@@ -22,7 +22,7 @@ namespace lab2_1
                 minn = Math.Min(minn, int.Parse(s));
             }
 
-            StreamWriter sw = new StreamWriter(@"C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab2\result");
+            StreamWriter sw = new StreamWriter(@"C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab2\result_for_maxmin");
             sw.WriteLine("max is " + maxx);
             sw.WriteLine("min is " + minn);
             sw.Close();

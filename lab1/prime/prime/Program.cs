@@ -10,11 +10,12 @@ namespace prime
     {
         static void Main(string[] args)
         {
-            /*
+            
             string line;
             line = Console.ReadLine(); // we read numbers
            
-            args = line.Split(' ');*/
+            args = line.Split(' ');
+            
             foreach (string s in args)
             {
                 int a = int.Parse(s);

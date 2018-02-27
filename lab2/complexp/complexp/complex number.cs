@@ -20,22 +20,31 @@ namespace complexp
             }
             public static complex_number operator +(complex_number c1, complex_number c2)
             {
-                int lcm = (c1.b * c2.b) / gcd(c1.b, c2.b);
-                int t1 = lcm / c1.b;
-                int t2 = lcm / c2.b;
-                int a_ = c1.a * t1 + c2.a * t2;
-                int b_ = lcm;
+                int a_ = c1.a * c2.b + c2.a * c1.b;
+                int b_ = c1.b* c2.b;
             complex_number c = new complex_number(a_, b_);
                 c.Simplify();
                 return c;
             }
             public static int gcd(int x, int y)
             {
-                if (y == 0)
-                {
-                    return x;
-                }
-                return gcd(y, x % y);
+                if(x < y)
+            {
+                int a = x;
+                x = y;
+                y = a;
+            }
+            int p = x % y; 
+            if(p == 0)
+            {
+                return y;
+            }
+            else
+            {
+                return gcd(y, p); 
+            }
+
+                    
             }
             public void Simplify()
             {

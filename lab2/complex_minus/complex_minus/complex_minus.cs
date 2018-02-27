@@ -21,7 +21,6 @@ namespace complex_minus
         }
         public static complex_minus operator -(complex_minus c1, complex_minus c2)
         {
-         //   int lcm = (c1.b * c2.b / gcd(c1.b, c2.b));
             int a1 = ((c1.a * c2.b) - (c2.a * c1.b));
             int b1 = c1.b*c2.b;
             complex_minus c = new complex_minus(a1, b1);

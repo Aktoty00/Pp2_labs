@@ -7,3 +7,6 @@ C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\prac\complexp\complexp
 C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab2\complexp\complexp\bin\Debug\complexp.exe.config
 C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab2\complexp\complexp\obj\Debug\complexp.exe
 C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab2\complexp\complexp\obj\Debug\complexp.pdb
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab2\complexp\complexp\bin\Debug\complexp.exe
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab2\complexp\complexp\bin\Debug\complexp.pdb
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab2\complexp\complexp\obj\Debug\complexp.csprojResolveAssemblyReference.cache

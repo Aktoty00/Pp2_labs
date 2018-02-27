@@ -38,7 +38,6 @@ namespace circle
         {
             static void Main(string[] args)
             {
-                //circle one = new circle();
                 double r = double.Parse(Console.ReadLine());
                
                 circle one = new circle(r);

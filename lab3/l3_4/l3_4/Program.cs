@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
-namespace l3_4s
+namespace l3_4
 {
     class Program
     {
@@ -25,11 +25,11 @@ namespace l3_4s
 
                 if (fileSystemInfo.GetType() == typeof(DirectoryInfo))
                 {
-                    Console.ForegroundColor = ConsoleColor.DarkBlue;
+                    Console.ForegroundColor = ConsoleColor.Green;
                 }
                 else
                 {
-                    Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                    Console.ForegroundColor = ConsoleColor.Red;
                 }
                 Console.WriteLine(fileSystemInfo.Name);
             }
@@ -37,10 +37,10 @@ namespace l3_4s
 
         static void Main(string[] args)
         {
-            DirectoryInfo directoryInfo = new DirectoryInfo(@"C:\Users\Рысдаулет Актоты\Desktop\PP2-labs");
+            DirectoryInfo directory = new DirectoryInfo(@"C:\Users\Рысдаулет Актоты\Desktop\PP2-labs");
             int cursor = 0;
-            int n = directoryInfo.GetFileSystemInfos().Length;
-            ShowDirectoryInfo(directoryInfo, cursor);
+            int n = directory.GetFileSystemInfos().Length;
+            ShowDirectoryInfo(directory, cursor);
 
             while (true)
             {
@@ -59,15 +59,15 @@ namespace l3_4s
                 }
                 if (keyInfo.Key == ConsoleKey.Enter)
                 {
-                    if (directoryInfo.GetFileSystemInfos()[cursor].GetType() == typeof(DirectoryInfo))
+                    if (directory.GetFileSystemInfos()[cursor].GetType() == typeof(DirectoryInfo))
                     {
-                        directoryInfo = new DirectoryInfo(directoryInfo.GetFileSystemInfos()[cursor].FullName);
+                        directory = new DirectoryInfo(directory.GetFileSystemInfos()[cursor].FullName);
                         cursor = 0;
-                        n = directoryInfo.GetFileSystemInfos().Length;
+                        n = directory.GetFileSystemInfos().Length;
                     }
                     else
                     {
-                        StreamReader sr = new StreamReader(directoryInfo.GetFileSystemInfos()[cursor].FullName);
+                        StreamReader sr = new StreamReader(directory.GetFileSystemInfos()[cursor].FullName);
                         string s = sr.ReadToEnd();
                         Console.Clear();
                         Console.BackgroundColor = ConsoleColor.Black;
@@ -76,18 +76,18 @@ namespace l3_4s
                         Console.ReadKey();
                     }
                 }
-                if (keyInfo.Key == ConsoleKey.Escape)
+                if (keyInfo.Key == ConsoleKey.Backspace)
                 {
-                    if (directoryInfo.Parent != null)
+                    if (directory.Parent != null)
                     {
-                        directoryInfo = directoryInfo.Parent;
+                        directory = directory.Parent;
                         cursor = 0;
-                        n = directoryInfo.GetFileSystemInfos().Length;
+                        n = directory.GetFileSystemInfos().Length;
                     }
                     else
                         break;
                 }
-                ShowDirectoryInfo(directoryInfo, cursor);
+            ShowDirectoryInfo(directory, cursor);
             }
         }
     }

@@ -7,3 +7,6 @@ C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\l3_4\l3_4\obj\Deb
 C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab3\l3_4\l3_4\bin\Debug\l3_4.exe.config
 C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab3\l3_4\l3_4\obj\Debug\l3_4.exe
 C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab3\l3_4\l3_4\obj\Debug\l3_4.pdb
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab3\l3_4\l3_4\bin\Debug\l3_4.exe
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab3\l3_4\l3_4\bin\Debug\l3_4.pdb
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab3\l3_4\l3_4\obj\Debug\l3_4.csprojResolveAssemblyReference.cache
