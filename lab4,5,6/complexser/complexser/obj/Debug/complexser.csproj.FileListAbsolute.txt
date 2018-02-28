@@ -1,0 +1,6 @@
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab4\complexser\complexser\bin\Debug\complexser.exe.config
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab4\complexser\complexser\bin\Debug\complexser.exe
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab4\complexser\complexser\bin\Debug\complexser.pdb
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab4\complexser\complexser\obj\Debug\complexser.csprojResolveAssemblyReference.cache
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab4\complexser\complexser\obj\Debug\complexser.exe
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab4\complexser\complexser\obj\Debug\complexser.pdb
