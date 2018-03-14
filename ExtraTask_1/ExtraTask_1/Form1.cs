@@ -45,11 +45,12 @@ namespace ExtraTask_1
             {
 
                 b.Location = new Point(b.Location.X, b.Location.Y + speed);
-                if (b.Location.Y == 545)
+                if (b.Location.Y == 540)
                 {
                     score++;
                 }
-                if (Math.Abs(b.Location.Y - button1.Location.Y) <= button1.Size.Height && Math.Abs(b.Location.X - button1.Location.X) <= button1.Size.Width)
+                
+                if (Math.Abs(b.Location.Y - button1.Location.Y) <= b.Height && Math.Abs(b.Location.X - button1.Location.X) <= b.Width)
                 {
                     timer1.Stop();
                     timer2.Stop();
@@ -58,18 +59,18 @@ namespace ExtraTask_1
                     score = 0;
                     button1.Text = (score).ToString();                   
                 }
-
+              
             }
             
 
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)//timer for creating buttons
         {
-            NewButtons();
+            NewButtons(); //creates new bottons
         }
 
-        private void timer2_Tick(object sender, EventArgs e)
+        private void timer2_Tick(object sender, EventArgs e)// timer for button's movement
         {
             button1.Text = (score).ToString();
             Moves();
@@ -80,10 +81,10 @@ namespace ExtraTask_1
         {
             switch (e.KeyChar)
             {
-                case (char)49:
+                case (char)49: //if we Press number 1,the button moves to the left
                     button1.Location = new Point(button1.Location.X - 5, button1.Location.Y);
                     break;
-                case (char)51:
+                case (char)51: //if we Press number 3,the button moves to the right
                     button1.Location = new Point(button1.Location.X + 5, button1.Location.Y);
                     break;
             }
