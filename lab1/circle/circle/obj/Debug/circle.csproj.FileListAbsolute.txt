@@ -1,6 +1,0 @@
-c:\users\рысдаулет актоты\documents\visual studio 2015\Projects\circle\circle\bin\Debug\circle.exe.config
-C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab1\circle\circle\bin\Debug\circle.exe.config
-C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab1\circle\circle\bin\Debug\circle.exe
-C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab1\circle\circle\bin\Debug\circle.pdb
-C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab1\circle\circle\obj\Debug\circle.exe
-C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab1\circle\circle\obj\Debug\circle.pdb

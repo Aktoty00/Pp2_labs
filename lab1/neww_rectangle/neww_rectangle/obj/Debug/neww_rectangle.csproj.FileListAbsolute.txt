@@ -1,6 +1,0 @@
-C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab1\neww_rectangle\neww_rectangle\bin\Debug\neww_rectangle.exe.config
-C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab1\neww_rectangle\neww_rectangle\bin\Debug\neww_rectangle.exe
-C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab1\neww_rectangle\neww_rectangle\bin\Debug\neww_rectangle.pdb
-C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab1\neww_rectangle\neww_rectangle\obj\Debug\neww_rectangle.csprojResolveAssemblyReference.cache
-C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab1\neww_rectangle\neww_rectangle\obj\Debug\neww_rectangle.exe
-C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab1\neww_rectangle\neww_rectangle\obj\Debug\neww_rectangle.pdb

@@ -1,6 +1,0 @@
-C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab2\complex_division\complex_division\bin\Debug\complex_division.exe.config
-C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab2\complex_division\complex_division\bin\Debug\complex_division.exe
-C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab2\complex_division\complex_division\bin\Debug\complex_division.pdb
-C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab2\complex_division\complex_division\obj\Debug\complex_division.csprojResolveAssemblyReference.cache
-C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab2\complex_division\complex_division\obj\Debug\complex_division.exe
-C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\lab2\complex_division\complex_division\obj\Debug\complex_division.pdb

@@ -7,3 +7,12 @@ C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\prac\ExtraTask_1\Extra
 C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\prac\ExtraTask_1\ExtraTask_1\obj\Debug\ExtraTask_1.csproj.GenerateResource.Cache
 C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\prac\ExtraTask_1\ExtraTask_1\obj\Debug\ExtraTask_1.exe
 C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\prac\ExtraTask_1\ExtraTask_1\obj\Debug\ExtraTask_1.pdb
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\ExtraTask_1\ExtraTask_1\bin\Debug\ExtraTask_1.exe.config
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\ExtraTask_1\ExtraTask_1\obj\Debug\ExtraTask_1.exe
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\ExtraTask_1\ExtraTask_1\obj\Debug\ExtraTask_1.pdb
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\ExtraTask_1\ExtraTask_1\bin\Debug\ExtraTask_1.exe
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\ExtraTask_1\ExtraTask_1\bin\Debug\ExtraTask_1.pdb
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\ExtraTask_1\ExtraTask_1\obj\Debug\ExtraTask_1.csprojResolveAssemblyReference.cache
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\ExtraTask_1\ExtraTask_1\obj\Debug\ExtraTask_1.Form1.resources
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\ExtraTask_1\ExtraTask_1\obj\Debug\ExtraTask_1.Properties.Resources.resources
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\ExtraTask_1\ExtraTask_1\obj\Debug\ExtraTask_1.csproj.GenerateResource.Cache
