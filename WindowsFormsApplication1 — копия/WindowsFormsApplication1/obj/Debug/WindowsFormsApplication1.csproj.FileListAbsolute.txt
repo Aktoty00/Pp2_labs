@@ -1,0 +1,21 @@
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\prac\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\prac\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\prac\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\prac\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\prac\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\prac\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\prac\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\prac\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\prac\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\prac\WindowsFormsApplication1 — копия\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\prac\WindowsFormsApplication1 — копия\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\prac\WindowsFormsApplication1 — копия\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\prac\WindowsFormsApplication1 — копия\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\prac\WindowsFormsApplication1 — копия\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\prac\WindowsFormsApplication1 — копия\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\prac\WindowsFormsApplication1 — копия\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\prac\WindowsFormsApplication1 — копия\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\prac\WindowsFormsApplication1 — копия\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
