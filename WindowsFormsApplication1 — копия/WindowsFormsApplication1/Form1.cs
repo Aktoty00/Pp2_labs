@@ -31,6 +31,12 @@ namespace WindowsFormsApplication1
                 textBox1.Text = "";
             }
             Button btn = sender as Button;
+            /*if (result_pressed)
+            {
+                textBox1.Text += "";
+                operation_pressed = false;
+                return;
+            }*/
             if (btn.Text == ".")
             {
                 if (! textBox1.Text.Contains("."))
@@ -45,12 +51,22 @@ namespace WindowsFormsApplication1
         private void operation_Click(object sender, EventArgs e)
         {
             Button btn = sender as Button;
-            operation = btn.Text;
-            value = double.Parse(textBox1.Text);
-            label2.Text = value.ToString() + operation;
-            textBox1.Text = "";
-            result_pressed = false;
-            operation_pressed = true;
+
+            if (operation_pressed)
+            {
+                operation = btn.Text;
+                label2.Text = value.ToString() + operation;
+                return;
+            }
+            else
+            {
+                operation = btn.Text;
+                value = double.Parse(textBox1.Text);
+                label2.Text = value.ToString() + operation;
+                textBox1.Text = "";
+                result_pressed = false;
+                operation_pressed = true;
+            }
         }
 
         private void operation2_Click(object sender, EventArgs e)
@@ -126,11 +142,23 @@ namespace WindowsFormsApplication1
                 x = Math.Pow(10, x);
                 textBox1.Text = x.ToString();
             }
-            operation_pressed = true;
+            operation_pressed = false;
+            result_pressed = false;
         }
         private void operation3_Click(object sender, EventArgs e)
         {
             Button btn = sender as Button;
+            if (operation_pressed)
+            {
+                if (btn.Text == "x^y")
+                    operation = "^";
+                if (btn.Text == "x^1/y")
+                    operation = " yroot";
+                if (btn.Text == "%")
+                    operation = "%";
+                label2.Text = value.ToString() + operation;
+                return;
+            }
             value = double.Parse(textBox1.Text);
             if (btn.Text == "x^y")
                 operation = "^";
@@ -163,9 +191,13 @@ namespace WindowsFormsApplication1
         {
 
             label2.Text = "";
-            operation_pressed = false;
+            
             if (result_pressed )
             {
+                if (operation_pressed)
+                {
+                    second = value;
+                }
                 switch (operation)
                 {
                     case "+":
@@ -188,9 +220,6 @@ namespace WindowsFormsApplication1
                         value /= second;
                         textBox1.Text = value.ToString();
                          break;
-                    //case "%":
-
-                       // break;
                     case "^":
                         value = Convert.ToDouble(textBox1.Text);
                         value = Math.Pow(value, second);
@@ -202,9 +231,16 @@ namespace WindowsFormsApplication1
                         textBox1.Text = value.ToString();
                         break;
                 }
+                result_pressed = true;
+                operation_pressed = false;
             }
             else
             {
+                if (operation_pressed)
+                {
+                    second = value;
+                }
+                else
                 second = Convert.ToDouble(textBox1.Text);
                 switch (operation)
                 {
@@ -243,6 +279,7 @@ namespace WindowsFormsApplication1
                         break;
                 }
                 result_pressed = true;
+                operation_pressed = false;
             }
         }
         
@@ -301,21 +338,34 @@ namespace WindowsFormsApplication1
                     textBox1.Text += e.KeyChar.ToString();
             }
             if (e.KeyChar == 42 || e.KeyChar == 43 || e.KeyChar == 45 || e.KeyChar == 47) 
-            {                
-                operation = e.KeyChar.ToString();
-                label2.Text = textBox1.Text;
-                value = double.Parse(textBox1.Text);
-                label2.Text = value.ToString() + operation;
-                textBox1.Text = "";
-                result_pressed = false;
-                operation_pressed = true;
+            {
+                if (operation_pressed)
+                {
+                    operation = e.KeyChar.ToString();
+                    label2.Text = value.ToString() + operation;
+                    return;
+                }
+                else
+                {
+                    operation = e.KeyChar.ToString();
+                    label2.Text = textBox1.Text;
+                    value = double.Parse(textBox1.Text);
+                    label2.Text = value.ToString() + operation;
+                    textBox1.Text = "";
+                    result_pressed = false;
+                    operation_pressed = true;
+                }
             }
             if ( e.KeyChar == 61 || e.KeyChar == 13)
             {
                 label2.Text = "";
-                operation_pressed = false;
+
                 if (result_pressed)
                 {
+                    if (operation_pressed)
+                    {
+                        second = value;
+                    }
                     switch (operation)
                     {
                         case "+":
@@ -338,9 +388,6 @@ namespace WindowsFormsApplication1
                             value /= second;
                             textBox1.Text = value.ToString();
                             break;
-                        //case "%":
-
-                        // break;
                         case "^":
                             value = Convert.ToDouble(textBox1.Text);
                             value = Math.Pow(value, second);
@@ -352,10 +399,17 @@ namespace WindowsFormsApplication1
                             textBox1.Text = value.ToString();
                             break;
                     }
+                    result_pressed = true;
+                    operation_pressed = false;
                 }
                 else
                 {
-                    second = Convert.ToDouble(textBox1.Text);
+                    if (operation_pressed)
+                    {
+                        second = value;
+                    }
+                    else
+                        second = Convert.ToDouble(textBox1.Text);
                     switch (operation)
                     {
                         case "+":
@@ -393,6 +447,7 @@ namespace WindowsFormsApplication1
                             break;
                     }
                     result_pressed = true;
+                    operation_pressed = false;
                 }
             }
            
