@@ -540,9 +540,9 @@
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(45, 35);
             this.button12.TabIndex = 45;
-            this.button12.Text = "π ";
+            this.button12.Text = "PI";
             this.button12.UseVisualStyleBackColor = false;
-            this.button12.Click += new System.EventHandler(this.PI_Click);
+            this.button12.Click += new System.EventHandler(this.button_Click);
             // 
             // button30
             // 

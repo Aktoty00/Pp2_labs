@@ -12,9 +12,9 @@ namespace WindowsFormsApplication1
 {
     public partial class Form1 : Form
     {
-        
-        double value= 0;  //first number
-        double second=0;  //second number
+
+        double value = 0;  //first number
+        double second = 0;  //second number
         string operation = "";
         double memory = 0;
         bool result_pressed = false;
@@ -23,31 +23,40 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
-               
+
         private void button_Click(object sender, EventArgs e)
         {
-            if ((textBox1.Text == "0")) 
+            if (result_pressed)
+            {
+                textBox1.Text = "0";
+            }
+            if ((textBox1.Text == "0"))
             {
                 textBox1.Text = "";
             }
             Button btn = sender as Button;
-            /*if (result_pressed)
+            if(btn.Text == "PI")
             {
-                textBox1.Text += "";
+                textBox1.Text = 3.14159265359.ToString();
                 operation_pressed = false;
+                result_pressed = false;
                 return;
-            }*/
+            }
             if (btn.Text == ".")
             {
-                if (! textBox1.Text.Contains("."))
+                if (textBox1.Text == "")
+                {
+                    textBox1.Text = "0";
+                }
+                if (!textBox1.Text.Contains("."))
                     textBox1.Text += btn.Text;
             }
             else
-            textBox1.Text += btn.Text;
+                textBox1.Text += btn.Text;
             operation_pressed = false;
             result_pressed = false;
         }
-        
+
         private void operation_Click(object sender, EventArgs e)
         {
             Button btn = sender as Button;
@@ -56,6 +65,8 @@ namespace WindowsFormsApplication1
             {
                 operation = btn.Text;
                 label2.Text = value.ToString() + operation;
+                operation_pressed = true;
+                result_pressed = false;
                 return;
             }
             else
@@ -73,7 +84,7 @@ namespace WindowsFormsApplication1
         {
             Button btn = sender as Button;
             double x = Convert.ToDouble(textBox1.Text);
-            
+
             if (btn.Text == "1/x")
             {
                 label2.Text = "1/(" + textBox1.Text + ")";
@@ -157,6 +168,8 @@ namespace WindowsFormsApplication1
                 if (btn.Text == "%")
                     operation = "%";
                 label2.Text = value.ToString() + operation;
+                result_pressed = false;
+                operation_pressed = true;
                 return;
             }
             value = double.Parse(textBox1.Text);
@@ -186,18 +199,11 @@ namespace WindowsFormsApplication1
             textBox1.Text = "0";
         }
 
-        
         private void enter_Click(object sender, EventArgs e)
         {
-
             label2.Text = "";
-            
-            if (result_pressed )
+            if (result_pressed)
             {
-                if (operation_pressed)
-                {
-                    second = value;
-                }
                 switch (operation)
                 {
                     case "+":
@@ -219,16 +225,22 @@ namespace WindowsFormsApplication1
                         value = Convert.ToDouble(textBox1.Text);
                         value /= second;
                         textBox1.Text = value.ToString();
-                         break;
+                        break;
                     case "^":
                         value = Convert.ToDouble(textBox1.Text);
                         value = Math.Pow(value, second);
                         textBox1.Text = value.ToString();
                         break;
                     case " yroot":
-                        value = Convert.ToDouble(textBox1.Text);
-                        value = Math.Pow(value, 1 / second);
-                        textBox1.Text = value.ToString();
+                        if ((second % 2 == 0) && (value < 0))
+                        {
+                            textBox1.Text = "Invalid input";
+                        }
+                        else
+                        {
+                            value = Math.Pow(value, 1 / second);
+                            textBox1.Text = value.ToString();
+                        }
                         break;
                 }
                 result_pressed = true;
@@ -239,9 +251,10 @@ namespace WindowsFormsApplication1
                 if (operation_pressed)
                 {
                     second = value;
+                    result_pressed = true;
                 }
                 else
-                second = Convert.ToDouble(textBox1.Text);
+                    second = Convert.ToDouble(textBox1.Text);
                 switch (operation)
                 {
                     case "+":
@@ -257,14 +270,14 @@ namespace WindowsFormsApplication1
                         textBox1.Text = (value / second).ToString();
                         break;
                     case "%":
-                        textBox1.Text = ((value * second)/100).ToString();
+                        textBox1.Text = ((value * second) / 100).ToString();
                         break;
                     case "Mod":
                         textBox1.Text = (value % second).ToString();
                         break;
                     case "^":
-                        value = Math.Pow(value,  second);
-                        textBox1.Text = value.ToString() ;
+                        value = Math.Pow(value, second);
+                        textBox1.Text = value.ToString();
                         break;
                     case " yroot":
                         if ((second % 2 == 0) && (value < 0))
@@ -272,7 +285,7 @@ namespace WindowsFormsApplication1
                             textBox1.Text = "Invalid input";
                         }
                         else
-                        { 
+                        {
                             value = Math.Pow(value, 1 / second);
                             textBox1.Text = value.ToString();
                         }
@@ -281,15 +294,25 @@ namespace WindowsFormsApplication1
                 result_pressed = true;
                 operation_pressed = false;
             }
-        }
-        
+    }
+ 
         private void negate_Click(object sender, EventArgs e)
         {
-            textBox1.Text = (0- Convert.ToDouble(textBox1.Text)).ToString();
+            textBox1.Text = ((-1)*Convert.ToDouble(textBox1.Text)).ToString();
+            operation_pressed = false;
+            result_pressed = false;
         }
 
         private void erase_Click(object sender, EventArgs e)
         {
+            if (textBox1.Text.Length == 2 && Convert.ToDouble(textBox1.Text) < 0)
+            {
+                textBox1.Text = "0";
+            }
+            if (textBox1.Text.Length == 3 && (textBox1.Text.Contains("-") && textBox1.Text.Contains(".")))
+            {
+                textBox1.Text = "0";
+            }
             if (textBox1.Text.Length > 0)
                 textBox1.Text = textBox1.Text.Remove(textBox1.Text.Length - 1, 1);
             if (textBox1.Text == "")
@@ -297,6 +320,8 @@ namespace WindowsFormsApplication1
         }
         private void MS_Click(object sender, EventArgs e)
         {
+            button27.Enabled = true;
+            button28.Enabled = true;
             memory = double.Parse(textBox1.Text);
         }
         private void memory_read(object sender, EventArgs e)
@@ -317,12 +342,16 @@ namespace WindowsFormsApplication1
         }
         private void memory_clear(object sender, EventArgs e)
         {
-            button27.Enabled = true;
-            button28.Enabled = true;
+            button27.Enabled = false;
+            button28.Enabled = false;
             memory = 0;
         }
         private void Form1_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if (result_pressed)
+            {
+                textBox1.Text = "0";
+            }
             if ((textBox1.Text == "0"))
             {
                 textBox1.Text = "";
@@ -331,11 +360,17 @@ namespace WindowsFormsApplication1
             {
                 if (e.KeyChar.ToString() == ".")
                 {
+                    if (textBox1.Text == "")
+                    {
+                        textBox1.Text = "0";
+                    }
                     if (!textBox1.Text.Contains("."))
                         textBox1.Text += ".";
                 }
                 else
                     textBox1.Text += e.KeyChar.ToString();
+                operation_pressed = false;
+                result_pressed = false;
             }
             if (e.KeyChar == 42 || e.KeyChar == 43 || e.KeyChar == 45 || e.KeyChar == 47) 
             {
@@ -343,12 +378,14 @@ namespace WindowsFormsApplication1
                 {
                     operation = e.KeyChar.ToString();
                     label2.Text = value.ToString() + operation;
+                    operation_pressed = true;
+                    result_pressed = false;
                     return;
                 }
                 else
                 {
                     operation = e.KeyChar.ToString();
-                    label2.Text = textBox1.Text;
+                    //label2.Text = textBox1.Text;
                     value = double.Parse(textBox1.Text);
                     label2.Text = value.ToString() + operation;
                     textBox1.Text = "";
@@ -359,13 +396,8 @@ namespace WindowsFormsApplication1
             if ( e.KeyChar == 61 || e.KeyChar == 13)
             {
                 label2.Text = "";
-
                 if (result_pressed)
                 {
-                    if (operation_pressed)
-                    {
-                        second = value;
-                    }
                     switch (operation)
                     {
                         case "+":
@@ -394,9 +426,15 @@ namespace WindowsFormsApplication1
                             textBox1.Text = value.ToString();
                             break;
                         case " yroot":
-                            value = Convert.ToDouble(textBox1.Text);
-                            value = Math.Pow(value, 1 / second);
-                            textBox1.Text = value.ToString();
+                            if ((second % 2 == 0) && (value < 0))
+                            {
+                                textBox1.Text = "Invalid input";
+                            }
+                            else
+                            {
+                                value = Math.Pow(value, 1 / second);
+                                textBox1.Text = value.ToString();
+                            }
                             break;
                     }
                     result_pressed = true;
@@ -407,6 +445,7 @@ namespace WindowsFormsApplication1
                     if (operation_pressed)
                     {
                         second = value;
+                        result_pressed = true;
                     }
                     else
                         second = Convert.ToDouble(textBox1.Text);
@@ -449,10 +488,19 @@ namespace WindowsFormsApplication1
                     result_pressed = true;
                     operation_pressed = false;
                 }
+
             }
-           
+
             if (e.KeyChar == 8)
             {
+                if(textBox1.Text.Length == 2 && Convert.ToDouble(textBox1.Text) <0)
+                {
+                    textBox1.Text = "0";
+                }
+                if (textBox1.Text.Length == 3 && (textBox1.Text.Contains("-") && textBox1.Text.Contains(".")))
+                {
+                    textBox1.Text = "0";
+                }
                 if (textBox1.Text.Length > 0)
                     textBox1.Text = textBox1.Text.Remove(textBox1.Text.Length - 1, 1);
                 if (textBox1.Text == "")
@@ -460,9 +508,9 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void PI_Click(object sender, EventArgs e)
+       /* private void PI_Click(object sender, EventArgs e)
         {
             textBox1.Text = "3.14159265359";
-        }
+        }*/
     }
 }
