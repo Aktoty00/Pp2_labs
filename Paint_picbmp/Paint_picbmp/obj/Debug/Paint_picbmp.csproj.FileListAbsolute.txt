@@ -1,0 +1,9 @@
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\Paint_picbmp\Paint_picbmp\bin\Debug\Paint_picbmp.exe.config
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\Paint_picbmp\Paint_picbmp\bin\Debug\Paint_picbmp.exe
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\Paint_picbmp\Paint_picbmp\bin\Debug\Paint_picbmp.pdb
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\Paint_picbmp\Paint_picbmp\obj\Debug\Paint_picbmp.csprojResolveAssemblyReference.cache
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\Paint_picbmp\Paint_picbmp\obj\Debug\Paint_picbmp.Form1.resources
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\Paint_picbmp\Paint_picbmp\obj\Debug\Paint_picbmp.Properties.Resources.resources
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\Paint_picbmp\Paint_picbmp\obj\Debug\Paint_picbmp.csproj.GenerateResource.Cache
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\Paint_picbmp\Paint_picbmp\obj\Debug\Paint_picbmp.exe
+C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\Paint_picbmp\Paint_picbmp\obj\Debug\Paint_picbmp.pdb
