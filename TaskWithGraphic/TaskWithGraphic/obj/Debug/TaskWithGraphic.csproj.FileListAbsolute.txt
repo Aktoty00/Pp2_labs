@@ -1,9 +1,0 @@
-C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\TaskWithGraphic\TaskWithGraphic\bin\Debug\TaskWithGraphic.exe.config
-C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\TaskWithGraphic\TaskWithGraphic\bin\Debug\TaskWithGraphic.exe
-C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\TaskWithGraphic\TaskWithGraphic\bin\Debug\TaskWithGraphic.pdb
-C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\TaskWithGraphic\TaskWithGraphic\obj\Debug\TaskWithGraphic.csprojResolveAssemblyReference.cache
-C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\TaskWithGraphic\TaskWithGraphic\obj\Debug\TaskWithGraphic.Form1.resources
-C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\TaskWithGraphic\TaskWithGraphic\obj\Debug\TaskWithGraphic.Properties.Resources.resources
-C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\TaskWithGraphic\TaskWithGraphic\obj\Debug\TaskWithGraphic.csproj.GenerateResource.Cache
-C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\TaskWithGraphic\TaskWithGraphic\obj\Debug\TaskWithGraphic.exe
-C:\Users\Рысдаулет Актоты\Desktop\PP2-labs\labs\TaskWithGraphic\TaskWithGraphic\obj\Debug\TaskWithGraphic.pdb
