@@ -54,6 +54,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.filll = new System.Windows.Forms.Button();
             this.trianglee = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.save_button = new System.Windows.Forms.Button();
+            this.open_button = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -76,7 +80,7 @@
             // penn
             // 
             this.penn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("penn.BackgroundImage")));
-            this.penn.Location = new System.Drawing.Point(12, 12);
+            this.penn.Location = new System.Drawing.Point(220, 11);
             this.penn.Name = "penn";
             this.penn.Size = new System.Drawing.Size(25, 23);
             this.penn.TabIndex = 0;
@@ -87,7 +91,7 @@
             // 
             this.rectanglee.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rectanglee.BackgroundImage")));
             this.rectanglee.Image = ((System.Drawing.Image)(resources.GetObject("rectanglee.Image")));
-            this.rectanglee.Location = new System.Drawing.Point(43, 12);
+            this.rectanglee.Location = new System.Drawing.Point(251, 11);
             this.rectanglee.Name = "rectanglee";
             this.rectanglee.Size = new System.Drawing.Size(25, 23);
             this.rectanglee.TabIndex = 1;
@@ -97,7 +101,7 @@
             // circlee
             // 
             this.circlee.Image = ((System.Drawing.Image)(resources.GetObject("circlee.Image")));
-            this.circlee.Location = new System.Drawing.Point(74, 12);
+            this.circlee.Location = new System.Drawing.Point(282, 11);
             this.circlee.Name = "circlee";
             this.circlee.Size = new System.Drawing.Size(25, 23);
             this.circlee.TabIndex = 2;
@@ -293,7 +297,7 @@
             // erasee
             // 
             this.erasee.Image = ((System.Drawing.Image)(resources.GetObject("erasee.Image")));
-            this.erasee.Location = new System.Drawing.Point(105, 12);
+            this.erasee.Location = new System.Drawing.Point(344, 11);
             this.erasee.Name = "erasee";
             this.erasee.Size = new System.Drawing.Size(25, 23);
             this.erasee.TabIndex = 8;
@@ -316,7 +320,7 @@
             // filll
             // 
             this.filll.Image = ((System.Drawing.Image)(resources.GetObject("filll.Image")));
-            this.filll.Location = new System.Drawing.Point(167, 12);
+            this.filll.Location = new System.Drawing.Point(375, 11);
             this.filll.Name = "filll";
             this.filll.Size = new System.Drawing.Size(25, 23);
             this.filll.TabIndex = 9;
@@ -326,18 +330,44 @@
             // trianglee
             // 
             this.trianglee.Image = ((System.Drawing.Image)(resources.GetObject("trianglee.Image")));
-            this.trianglee.Location = new System.Drawing.Point(136, 12);
+            this.trianglee.Location = new System.Drawing.Point(313, 11);
             this.trianglee.Name = "trianglee";
             this.trianglee.Size = new System.Drawing.Size(25, 23);
             this.trianglee.TabIndex = 10;
             this.trianglee.UseVisualStyleBackColor = true;
             this.trianglee.Click += new System.EventHandler(this.button_Click);
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // save_button
+            // 
+            this.save_button.Location = new System.Drawing.Point(18, 11);
+            this.save_button.Name = "save_button";
+            this.save_button.Size = new System.Drawing.Size(54, 23);
+            this.save_button.TabIndex = 11;
+            this.save_button.Text = "save";
+            this.save_button.UseVisualStyleBackColor = true;
+            this.save_button.Click += new System.EventHandler(this.save_button_Click);
+            // 
+            // open_button
+            // 
+            this.open_button.Location = new System.Drawing.Point(82, 11);
+            this.open_button.Name = "open_button";
+            this.open_button.Size = new System.Drawing.Size(54, 23);
+            this.open_button.TabIndex = 12;
+            this.open_button.Text = "open";
+            this.open_button.UseVisualStyleBackColor = true;
+            this.open_button.Click += new System.EventHandler(this.open_button_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(919, 515);
+            this.Controls.Add(this.open_button);
+            this.Controls.Add(this.save_button);
             this.Controls.Add(this.trianglee);
             this.Controls.Add(this.filll);
             this.Controls.Add(this.erasee);
@@ -398,6 +428,10 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button filll;
         private System.Windows.Forms.Button trianglee;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.Button save_button;
+        private System.Windows.Forms.Button open_button;
     }
 }
 

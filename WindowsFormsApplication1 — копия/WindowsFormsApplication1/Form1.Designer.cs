@@ -98,6 +98,7 @@
             this.seven.Text = "7";
             this.seven.UseVisualStyleBackColor = false;
             this.seven.Click += new System.EventHandler(this.button_Click);
+            this.seven.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button12_MouseMove);
             // 
             // eight
             // 
@@ -109,6 +110,7 @@
             this.eight.Text = "8";
             this.eight.UseVisualStyleBackColor = false;
             this.eight.Click += new System.EventHandler(this.button_Click);
+            this.eight.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button12_MouseMove);
             // 
             // nine
             // 
@@ -120,6 +122,7 @@
             this.nine.Text = "9";
             this.nine.UseVisualStyleBackColor = false;
             this.nine.Click += new System.EventHandler(this.button_Click);
+            this.nine.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button12_MouseMove);
             // 
             // four
             // 
@@ -131,6 +134,7 @@
             this.four.Text = "4";
             this.four.UseVisualStyleBackColor = false;
             this.four.Click += new System.EventHandler(this.button_Click);
+            this.four.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button12_MouseMove);
             // 
             // five
             // 
@@ -142,6 +146,7 @@
             this.five.Text = "5";
             this.five.UseVisualStyleBackColor = false;
             this.five.Click += new System.EventHandler(this.button_Click);
+            this.five.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button12_MouseMove);
             // 
             // six
             // 
@@ -153,6 +158,7 @@
             this.six.Text = "6";
             this.six.UseVisualStyleBackColor = false;
             this.six.Click += new System.EventHandler(this.button_Click);
+            this.six.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button12_MouseMove);
             // 
             // one
             // 
@@ -164,6 +170,7 @@
             this.one.Text = "1";
             this.one.UseVisualStyleBackColor = false;
             this.one.Click += new System.EventHandler(this.button_Click);
+            this.one.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button12_MouseMove);
             // 
             // two
             // 
@@ -175,6 +182,7 @@
             this.two.Text = "2";
             this.two.UseVisualStyleBackColor = false;
             this.two.Click += new System.EventHandler(this.button_Click);
+            this.two.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button12_MouseMove);
             // 
             // three
             // 
@@ -186,6 +194,7 @@
             this.three.Text = "3";
             this.three.UseVisualStyleBackColor = false;
             this.three.Click += new System.EventHandler(this.button_Click);
+            this.three.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button12_MouseMove);
             // 
             // zero
             // 
@@ -197,6 +206,7 @@
             this.zero.Text = "0";
             this.zero.UseVisualStyleBackColor = false;
             this.zero.Click += new System.EventHandler(this.button_Click);
+            this.zero.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button12_MouseMove);
             // 
             // button11
             // 
@@ -208,6 +218,7 @@
             this.button11.Text = "+/-";
             this.button11.UseVisualStyleBackColor = false;
             this.button11.Click += new System.EventHandler(this.negate_Click);
+            this.button11.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button12_MouseMove);
             // 
             // dec
             // 
@@ -219,6 +230,7 @@
             this.dec.Text = ".";
             this.dec.UseVisualStyleBackColor = false;
             this.dec.Click += new System.EventHandler(this.button_Click);
+            this.dec.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button12_MouseMove);
             // 
             // times
             // 
@@ -230,6 +242,7 @@
             this.times.Text = "*";
             this.times.UseVisualStyleBackColor = false;
             this.times.Click += new System.EventHandler(this.operation_Click);
+            this.times.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button12_MouseMove);
             // 
             // add
             // 
@@ -241,6 +254,7 @@
             this.add.Text = "+";
             this.add.UseVisualStyleBackColor = false;
             this.add.Click += new System.EventHandler(this.operation_Click);
+            this.add.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button12_MouseMove);
             // 
             // sub
             // 
@@ -252,6 +266,7 @@
             this.sub.Text = "-";
             this.sub.UseVisualStyleBackColor = false;
             this.sub.Click += new System.EventHandler(this.operation_Click);
+            this.sub.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button12_MouseMove);
             // 
             // equal
             // 
@@ -263,6 +278,7 @@
             this.equal.Text = "=";
             this.equal.UseVisualStyleBackColor = false;
             this.equal.Click += new System.EventHandler(this.enter_Click);
+            this.equal.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button12_MouseMove);
             // 
             // div
             // 
@@ -274,6 +290,7 @@
             this.div.Text = "/";
             this.div.UseVisualStyleBackColor = false;
             this.div.Click += new System.EventHandler(this.operation_Click);
+            this.div.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button12_MouseMove);
             // 
             // button19
             // 
@@ -285,6 +302,7 @@
             this.button19.Text = "C";
             this.button19.UseVisualStyleBackColor = false;
             this.button19.Click += new System.EventHandler(this.C_Click);
+            this.button19.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button12_MouseMove);
             // 
             // button20
             // 
@@ -296,6 +314,7 @@
             this.button20.Text = "CE";
             this.button20.UseVisualStyleBackColor = false;
             this.button20.Click += new System.EventHandler(this.CE_Click);
+            this.button20.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button12_MouseMove);
             // 
             // button16
             // 
@@ -307,6 +326,7 @@
             this.button16.Text = "←";
             this.button16.UseVisualStyleBackColor = false;
             this.button16.Click += new System.EventHandler(this.erase_Click);
+            this.button16.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button12_MouseMove);
             // 
             // button21
             // 
@@ -318,6 +338,7 @@
             this.button21.Text = "1/x";
             this.button21.UseVisualStyleBackColor = false;
             this.button21.Click += new System.EventHandler(this.operation2_Click);
+            this.button21.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button12_MouseMove);
             // 
             // button22
             // 
@@ -329,6 +350,7 @@
             this.button22.Text = "x^2";
             this.button22.UseVisualStyleBackColor = false;
             this.button22.Click += new System.EventHandler(this.operation2_Click);
+            this.button22.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button12_MouseMove);
             // 
             // button23
             // 
@@ -340,6 +362,7 @@
             this.button23.Text = "√";
             this.button23.UseVisualStyleBackColor = false;
             this.button23.Click += new System.EventHandler(this.operation2_Click);
+            this.button23.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button12_MouseMove);
             // 
             // button24
             // 
@@ -350,7 +373,8 @@
             this.button24.TabIndex = 26;
             this.button24.Text = "%";
             this.button24.UseVisualStyleBackColor = false;
-            this.button24.Click += new System.EventHandler(this.operation3_Click);
+            this.button24.Click += new System.EventHandler(this.procent_Click);
+            this.button24.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button12_MouseMove);
             // 
             // button25
             // 
@@ -363,6 +387,7 @@
             this.button25.Text = "M-";
             this.button25.UseVisualStyleBackColor = false;
             this.button25.Click += new System.EventHandler(this.memory_minus);
+            this.button25.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button12_MouseMove);
             // 
             // button26
             // 
@@ -375,6 +400,7 @@
             this.button26.Text = "M+";
             this.button26.UseVisualStyleBackColor = false;
             this.button26.Click += new System.EventHandler(this.memory_plus);
+            this.button26.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button12_MouseMove);
             // 
             // button27
             // 
@@ -388,6 +414,7 @@
             this.button27.Text = "MR";
             this.button27.UseVisualStyleBackColor = false;
             this.button27.Click += new System.EventHandler(this.memory_read);
+            this.button27.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button12_MouseMove);
             // 
             // button28
             // 
@@ -401,6 +428,7 @@
             this.button28.Text = "MC";
             this.button28.UseVisualStyleBackColor = false;
             this.button28.Click += new System.EventHandler(this.memory_clear);
+            this.button28.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button12_MouseMove);
             // 
             // button29
             // 
@@ -413,6 +441,7 @@
             this.button29.Text = "MS";
             this.button29.UseVisualStyleBackColor = false;
             this.button29.Click += new System.EventHandler(this.MS_Click);
+            this.button29.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button12_MouseMove);
             // 
             // label2
             // 
@@ -433,6 +462,7 @@
             this.button1.Text = "!";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.operation2_Click);
+            this.button1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button12_MouseMove);
             // 
             // button2
             // 
@@ -444,6 +474,7 @@
             this.button2.Text = "log";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.operation2_Click);
+            this.button2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button12_MouseMove);
             // 
             // button3
             // 
@@ -455,6 +486,7 @@
             this.button3.Text = "e^x";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.operation2_Click);
+            this.button3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button12_MouseMove);
             // 
             // button4
             // 
@@ -466,6 +498,7 @@
             this.button4.Text = "x^y";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.operation3_Click);
+            this.button4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button12_MouseMove);
             // 
             // button5
             // 
@@ -477,6 +510,7 @@
             this.button5.Text = "10^x";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.operation2_Click);
+            this.button5.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button12_MouseMove);
             // 
             // button6
             // 
@@ -488,6 +522,7 @@
             this.button6.Text = "Mod";
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.operation_Click);
+            this.button6.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button12_MouseMove);
             // 
             // button7
             // 
@@ -499,6 +534,7 @@
             this.button7.Text = "sin";
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.operation2_Click);
+            this.button7.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button12_MouseMove);
             // 
             // button8
             // 
@@ -510,6 +546,7 @@
             this.button8.Text = "cos";
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.operation2_Click);
+            this.button8.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button12_MouseMove);
             // 
             // button9
             // 
@@ -521,6 +558,7 @@
             this.button9.Text = "tan";
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.operation2_Click);
+            this.button9.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button12_MouseMove);
             // 
             // button10
             // 
@@ -532,6 +570,7 @@
             this.button10.Text = "x^1/y";
             this.button10.UseVisualStyleBackColor = false;
             this.button10.Click += new System.EventHandler(this.operation3_Click);
+            this.button10.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button12_MouseMove);
             // 
             // button12
             // 
@@ -543,6 +582,7 @@
             this.button12.Text = "PI";
             this.button12.UseVisualStyleBackColor = false;
             this.button12.Click += new System.EventHandler(this.button_Click);
+            this.button12.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button12_MouseMove);
             // 
             // button30
             // 
@@ -554,6 +594,7 @@
             this.button30.Text = "x^3";
             this.button30.UseVisualStyleBackColor = false;
             this.button30.Click += new System.EventHandler(this.operation2_Click);
+            this.button30.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button12_MouseMove);
             // 
             // Form1
             // 

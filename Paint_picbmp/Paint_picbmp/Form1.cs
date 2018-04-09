@@ -25,9 +25,8 @@ namespace Paint_picbmp
         int a;
         Point prev, cur;
         SolidBrush solidbrush;
-        Image file;
         Color color1, color2, clr = Color.Black;
-        Queue<Point> q;
+        Queue <Point> q;
         public Form1()
         {
             InitializeComponent();
@@ -59,11 +58,12 @@ namespace Paint_picbmp
                 {
                     int x = q.First().X;
                     int y = q.First().Y;
-                    q.Dequeue();
-                    Fill(x + 1, y);
                     Fill(x, y + 1);
-                    Fill(x - 1, y);
                     Fill(x, y - 1);
+                    Fill(x - 1, y);
+                    Fill(x + 1, y);
+                    q.Dequeue();
+
                 }
             }
             pictureBox1.Image = bmp;
@@ -124,7 +124,7 @@ namespace Paint_picbmp
             }
             if(tool == Tool.TRIANGLE)
             {
-                Point[] poly = { new Point(w/2 + prev.X, prev.Y), new Point(prev.X, cur.Y), new Point(cur.X, cur.Y) };
+                Point[] poly = { new Point(w/2 + x, y), new Point(x, Math.Max(prev.Y, cur.Y)), new Point(Math.Max(prev.X, cur.X), Math.Max(prev.Y, cur.Y)) };
                 if (e.Button == MouseButtons.Left)
                 {
                     bmp_g.DrawPolygon(new Pen(pBoxleft.BackColor, a), poly);
@@ -160,7 +160,7 @@ namespace Paint_picbmp
             }
             if (tool == Tool.TRIANGLE)
             {
-               Point[] poly = { new Point(w/2+prev.X, prev.Y), new Point(prev.X, cur.Y), new Point(cur.X, cur.Y)};
+                Point[] poly = { new Point(w / 2 + x, y), new Point(x, Math.Max(prev.Y, cur.Y)), new Point(Math.Max(prev.X, cur.X), Math.Max(prev.Y, cur.Y)) };
                 if (MouseButtons == MouseButtons.Left)
                 {
                     e.Graphics.DrawPolygon(new Pen(pBoxleft.BackColor, a), poly);
@@ -169,7 +169,6 @@ namespace Paint_picbmp
                 {
                     e.Graphics.DrawPolygon(new Pen(pBoxright.BackColor, a), poly);
                 }
-               
             }
         }
         
@@ -177,20 +176,43 @@ namespace Paint_picbmp
         {
             a = trackBar1.Value;
         }
+        
+        private void save_button_Click(object sender, EventArgs e)
+        {
+            saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.Filter = "Image Files(*.BMP)|*.BMP|Image Files(*.JPG)|*.JPG|Image Files(*.GIF)|*.GIF";
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                pictureBox1.Image.Save(saveFileDialog1.FileName);
+        }
+
+        private void open_button_Click(object sender, EventArgs e)
+        {
+            openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.Filter = "Image Files(*.BMP)|*.BMP|Image Files(*.JPG)|*.JPG|Image Files(*.GIF)|*.GIF";
+            if(openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                openFileDialog1.OpenFile();
+                bmp = new Bitmap(openFileDialog1.FileName);
+                pictureBox1.Image = bmp;
+                bmp_g = Graphics.FromImage(bmp);
+            }
+        }
 
         private void Color_CLick(object sender, EventArgs e)
         {
-            colorDialog1.Color = color_button.BackColor;
             if (colorDialog1.ShowDialog() == DialogResult.OK)
             {
                 if (pboxleft_clicked)
+                {
                     pBoxleft.BackColor = colorDialog1.Color;
-                pen = new Pen(pBoxleft.BackColor, trackBar1.Value);
-
+                    pen = new Pen(pBoxleft.BackColor, trackBar1.Value);
+                }
                 if (pboxright_clicked)
+                {
                     pBoxright.BackColor = colorDialog1.Color;
-                pen = new Pen(pBoxright.BackColor, trackBar1.Value);
-            }
+                    pen = new Pen(pBoxright.BackColor, trackBar1.Value);
+                }
+           }
         }
 
         private void Penal_Click(object sender, EventArgs e)

@@ -39,7 +39,7 @@ namespace WindowsFormsApplication1
             {
                 textBox1.Text = 3.14159265359.ToString();
                 operation_pressed = false;
-                result_pressed = false;
+            result_pressed = false;
                 return;
             }
             if (btn.Text == ".")
@@ -156,6 +156,11 @@ namespace WindowsFormsApplication1
             operation_pressed = false;
             result_pressed = false;
         }
+        private void procent_Click(object sender, EventArgs e)
+        {
+            double d = value * (Convert.ToDouble(textBox1.Text) / 100);
+            textBox1.Text = d.ToString();
+        }
         private void operation3_Click(object sender, EventArgs e)
         {
             Button btn = sender as Button;
@@ -181,8 +186,6 @@ namespace WindowsFormsApplication1
                 operation = "%";
             label2.Text = value.ToString() + operation;
             textBox1.Text = "";
-            result_pressed = false;
-            operation_pressed = true;
         }
         private void C_Click(object sender, EventArgs e)
         {
@@ -191,12 +194,12 @@ namespace WindowsFormsApplication1
             value = 0;
             second = 0;
             operation = "";
-            result_pressed = false;
         }
 
         private void CE_Click(object sender, EventArgs e)
         {
             textBox1.Text = "0";
+            
         }
 
         private void enter_Click(object sender, EventArgs e)
@@ -250,8 +253,10 @@ namespace WindowsFormsApplication1
             {
                 if (operation_pressed)
                 {
+                    MessageBox.Show("kek");
                     second = value;
                     result_pressed = true;
+                    operation_pressed = true;
                 }
                 else
                     second = Convert.ToDouble(textBox1.Text);
@@ -385,7 +390,7 @@ namespace WindowsFormsApplication1
                 else
                 {
                     operation = e.KeyChar.ToString();
-                    //label2.Text = textBox1.Text;
+                    label2.Text = textBox1.Text;
                     value = double.Parse(textBox1.Text);
                     label2.Text = value.ToString() + operation;
                     textBox1.Text = "";
@@ -446,6 +451,7 @@ namespace WindowsFormsApplication1
                     {
                         second = value;
                         result_pressed = true;
+                        operation_pressed = true;
                     }
                     else
                         second = Convert.ToDouble(textBox1.Text);
@@ -508,9 +514,10 @@ namespace WindowsFormsApplication1
             }
         }
 
-       /* private void PI_Click(object sender, EventArgs e)
+        private void button12_MouseMove(object sender, MouseEventArgs e)
         {
-            textBox1.Text = "3.14159265359";
-        }*/
+            //Button btn = sender as Button;
+            //btn.BackColor = Color.DarkGray;
+        }
     }
 }
